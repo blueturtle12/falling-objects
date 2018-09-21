@@ -12,7 +12,9 @@
     <title>Falling objects</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <!--<link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css" media="screen,projection" 
+    /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
 </head>
 
 <body>
@@ -22,12 +24,50 @@
     <main class="main">
         <aside class="aside-menu">
             <h1 class="aside-menu__title">Controls</h1>
+            <div class="aside-menu__shapes">
+                <h2 class="shapes__subtitle">Choose a shape to modify</h2>
+                <div class="shapes__carouselbox">
+                    <ul class="shapes__carousel-content">
+                        <li class="carousel-item"><img src="./img/icons8-iron-man.svg"></li>
+                        <li class="carousel-item"><img src="./img/icons8-punisher.svg"></li>
+                        <li class="carousel-item"><img src="./img/icons8-spider-man-new-filled.svg"></li>
+                    </ul>
+                    <div class="buttons">
+                        <button class="prev">
+                            ◀ <span class="offscreen"></span>
+                        </button>
+                        <button class="next">
+                            <span class="offscreen"></span> ▶
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="aside__control-tabs">
+                <div class="tab-slider--nav">
+                    <ul class="tab-slider--tabs">
+                        <li class="tab-slider--trigger active" rel="tab1">Tab 1</li>
+                        <li class="tab-slider--trigger" rel="tab2">Tab 2</li>
+                    </ul>
+                </div>
+                <div class="tab-slider--container">
+                    <div id="tab1" class="tab-slider--body">
+                        <h2>First Tab</h2>
+                        <p>Toggle switch style tab navigation. Currently only works with two tabs.</p>
+                        <p>Donec ullamcorper nulla non metus auctor fringiibero, a pharetra augue.</p>
+                    </div>
+                    <div id="tab2" class="tab-slider--body">
+                        <h2>Second Tab</h2>
+                        <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
+                    </div>
+                </div>
         </aside>
         <section class="main-container">
             <h1 class="main-container__title">Falling objects</h1>
         </section>
     </main>
     <script src="" async defer></script>
+    <!--<script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 </body>
 
 </html>

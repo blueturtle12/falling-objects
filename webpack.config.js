@@ -1,5 +1,4 @@
 var path = require('path');
-var webpack = require('webpack');
 var extractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -37,8 +36,28 @@ module.exports = {
         test: /\.html$/,
         use: ['html-loader'],
       },
+      /* {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-inline-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'icons/',
+              publicPath: 'icons/',
+            },
+          },
+        ],
+      },*/
+      /*{
+        test: /\.svg/,
+        use: {
+          loader: 'svg-url-loader',
+          options: {},
+        },
+      },*/
       {
-        test: /\.(jpg|png)$/,
+        test: /\.(jpg|png|svg)$/,
         use: [
           {
             loader: 'file-loader',
