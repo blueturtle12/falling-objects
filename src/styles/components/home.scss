@@ -16,7 +16,7 @@
   .main-container {
     width: 85%;
     height: 100%;
-
+    
     .main-container__title {
       height: 10%;
       margin: 0;
@@ -27,6 +27,11 @@
       width: 100%;
       overflow: hidden;
       position: relative;
+      background:linear-gradient(to bottom, rgba(254,252,234,0.64) 11%,
+      rgba(251,244,192,0.64) 31%,rgba(241,218,54,0.3) 97%,
+      rgba(241,218,54,0.28) 100%), url('../img/marvelbg.png') ;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     @media (max-width: 767px) {
