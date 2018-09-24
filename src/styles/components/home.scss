@@ -17,6 +17,18 @@
     width: 85%;
     height: 100%;
 
+    .main-container__title {
+      height: 10%;
+      margin: 0;
+    }
+
+    .main-container__box {
+      height: 90%;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
     @media (max-width: 767px) {
       width: 65%;
     }

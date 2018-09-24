@@ -1,8 +1,10 @@
 import '../styles/App.scss';
 import carousel from './components/carousel';
-import Tabs from './components/controlTabs';
+import dropBox from './components/FallingAnimation';
 
 window.onload = function() {
   carousel();
-  Tabs();
+  for (let i = 0; i < 50; i++) {
+    dropBox();
+  }
 };
