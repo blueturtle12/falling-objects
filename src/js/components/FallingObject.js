@@ -3,10 +3,11 @@ const random = (min, max) => {
 };
 
 export default class FallingObject {
-  constructor(width, height, backGround) {
+  constructor(width, height, backGround, speed) {
     this.height = height;
     this.width = width;
     this.backGround = backGround;
+    this.speed = speed;
   }
 
   createObject() {
@@ -14,6 +15,7 @@ export default class FallingObject {
       100,
       document.querySelector('.main-container__box').offsetWidth - 100,
     );
+
     let marvelBox = document.createElement('div');
     marvelBox.classList.add('spiderMan-box');
     marvelBox.style.width = `${this.width}px`;
@@ -21,13 +23,15 @@ export default class FallingObject {
     marvelBox.style.left = `${length}px`;
     marvelBox.style.background = `url(${this.backGround})`;
     marvelBox.style.backgroundSize = 'contain';
-    marvelBox.style.transition = 'transform 4s linear';
+    marvelBox.style.transition = `transform ${this.speed}s linear`;
 
-    document.querySelector('.main-container__box').appendChild(marvelBox);
+    setTimeout(() => {
+      document.querySelector('.main-container__box').appendChild(marvelBox);
+    }, random(500, 5000));
 
     setTimeout(() => {
       marvelBox.classList.add('move');
-    }, random(0, 5000));
+    }, random(500, 10000));
 
     marvelBox.addEventListener(
       'transitionend',

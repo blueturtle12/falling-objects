@@ -1,3 +1,5 @@
+export let objectDataType;
+
 const carousel = () => {
   var box = document.querySelector('.shapes__carouselbox');
   var next = box.querySelector('.next');
@@ -18,6 +20,7 @@ const carousel = () => {
     }
     current = items[counter];
     current.classList.add('current');
+    objectDataType = current.getAttribute('data-object-type');
   }
   next.addEventListener('click', function() {
     navigate(1);

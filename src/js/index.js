@@ -1,10 +1,10 @@
 import '../styles/App.scss';
 import carousel from './components/carousel';
 import dropBox from './components/FallingAnimation';
+import asideControls from './components/asideControls';
 
 window.onload = function() {
   carousel();
-  for (let i = 0; i < 20; i++) {
-    dropBox();
-  }
+  asideControls();
+  dropBox();
 };
