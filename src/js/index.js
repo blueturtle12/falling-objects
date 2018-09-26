@@ -15,9 +15,12 @@ window.onload = function() {
 
   startButton.addEventListener('click', () => {
     if (!gameRunning) {
-      document
-        .querySelector('.main-container__box')
-        .removeChild(document.querySelector('.box__title'));
+      let startMessage = document.querySelector('.box__title');
+      if (startMessage !== null) {
+        document
+          .querySelector('.main-container__box')
+          .removeChild(startMessage);
+      }
       gameRunning = true;
       interval = setInterval(() => {
         dropBox();
