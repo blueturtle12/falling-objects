@@ -1,3 +1,5 @@
+import conditionalRender from './conditionalRender';
+
 export let objectDataType;
 
 const carousel = () => {
@@ -24,11 +26,14 @@ const carousel = () => {
   }
   next.addEventListener('click', function() {
     navigate(1);
+    conditionalRender();
   });
   prev.addEventListener('click', function() {
     navigate(-1);
+    conditionalRender();
   });
   navigate(0);
+  conditionalRender();
 };
 
 export default carousel;

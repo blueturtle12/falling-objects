@@ -20,7 +20,9 @@
         <![endif]-->
     <main class="main">
         <aside class="aside-menu">
-            <h1 class="aside-menu__title">Controls</h1>
+            <div class="aside-menu__header">
+                <h1 class="aside-menu__title">Controls</h1>
+            </div>
             <div class="aside-menu__shapes">
                 <h2 class="shapes__subtitle">Choose a shape to modify</h2>
                 <div class="shapes__carouselbox">
@@ -43,21 +45,34 @@
                 <input type="radio" name="tabs" id="tabone" checked="checked">
                 <label for="tabone">Size</label>
                 <div class="tab">
-                    <h1>Adjust the size</h1>
-                    <input type="range" min="1" max="10" value="2" class="slider" id="size">
+                    <h2 class="tab__title-size">Adjust the size</h2>
+                    <span>Minimum</span>
+                    <span id="tab__size-range-min"></span>
+                    <input type="range" min="1" max="10" value="2" class="slider" id="size-min">
+                    <span>Maximum</span>
+                    <span id="tab__size-range-max"></span>
+                    <input type="range" min="1" max="10" value="4" class="slider" id="size-max">
                 </div>
 
                 <input type="radio" name="tabs" id="tabtwo">
                 <label for="tabtwo">Speed</label>
                 <div class="tab">
-                    <h1>Adjust the speed</h1>
-                    <input type="range" min="1" max="10" value="2" class="slider" id="speed">
+                    <h2 class="tab__title-speed">Adjust the speed</h2>
+                    <span>Minimum</span>
+                    <span id="tab__speed-range-min"></span>
+                    <input type="range" min="1" max="10" value="2" class="slider" id="speed-min">
+                    <span>Maximum</span>
+                    <span id="tab__speed-range-max"></span>
+                    <input type="range" min="1" max="10" value="2" class="slider" id="speed-max">
                 </div>
             </div>
+            <button class="aside__start-button">Start</button>
         </aside>
         <section class="main-container">
             <h1 class="main-container__title">Falling objects</h1>
-            <div class="main-container__box"></div>
+            <div class="main-container__box">
+                <h1 class="box__title">Click Start to begin</h1>
+            </div>
         </section>
     </main>
     <script src="" async defer></script>

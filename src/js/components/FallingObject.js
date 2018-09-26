@@ -1,4 +1,4 @@
-const random = (min, max) => {
+export const random = (min, max) => {
   return Math.round(Math.random() * (max - min) + min);
 };
 
@@ -27,11 +27,11 @@ export default class FallingObject {
 
     setTimeout(() => {
       document.querySelector('.main-container__box').appendChild(marvelBox);
-    }, random(500, 5000));
+    }, random(500, 2000));
 
     setTimeout(() => {
       marvelBox.classList.add('move');
-    }, random(500, 10000));
+    }, random(100, 5000));
 
     marvelBox.addEventListener(
       'transitionend',
