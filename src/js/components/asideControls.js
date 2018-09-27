@@ -1,4 +1,5 @@
 import { objectDataType } from './carousel';
+import noUiSlider from 'nouislider';
 
 export let ironManAtt = {
   sizeMin: 40,
@@ -20,6 +21,15 @@ export let spiderManAtt = {
 };
 
 const asideControls = () => {
+  const slider = document.getElementById('slidees');
+
+  noUiSlider.create(slider, {
+    start: [4000, 8000],
+    range: {
+      min: [2000],
+      max: [10000],
+    },
+  });
   const sizeControlMin = document.querySelector('#size-min');
   const sizeControlMax = document.querySelector('#size-max');
   const speedControlmin = document.querySelector('#speed-min');

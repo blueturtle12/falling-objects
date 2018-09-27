@@ -2,7 +2,6 @@ import '../styles/App.scss';
 import carousel from './components/carousel';
 import dropBox from './components/FallingAnimation';
 import asideControls from './components/asideControls';
-import conditionalRender from './components/conditionalRender';
 
 export let gameRunning = false;
 let interval = null;

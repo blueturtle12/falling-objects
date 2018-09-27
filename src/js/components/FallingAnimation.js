@@ -1,7 +1,6 @@
 import FallingObject from './FallingObject';
 import { ironManAtt, punisherAtt, spiderManAtt } from './asideControls';
 import { random } from './FallingObject';
-import { gameRunning } from '../index';
 
 const dropBox = () => {
   //setTimeout(() => {
