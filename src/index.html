@@ -46,28 +46,31 @@
                 <label for="tabone">Size</label>
                 <div class="tab">
                     <h2 class="tab__title-size">Adjust the size</h2>
-                    <span>Minimum</span>
-                    <span id="tab__size-range-min"></span>
-                    <input type="range" min="1" max="10" value="2" class="slider" id="size-min">
-                    <span>Maximum</span>
-                    <span id="tab__size-range-max"></span>
-                    <input type="range" min="1" max="10" value="4" class="slider" id="size-max">
+                    <div id="size" class="noUiSlider"></div>
                 </div>
 
                 <input type="radio" name="tabs" id="tabtwo">
                 <label for="tabtwo">Speed</label>
                 <div class="tab">
                     <h2 class="tab__title-speed">Adjust the speed</h2>
-                    <span>Minimum</span>
-                    <span id="tab__speed-range-min"></span>
-                    <input type="range" min="1" max="10" value="2" class="slider" id="speed-min">
-                    <span>Maximum</span>
-                    <span id="tab__speed-range-max"></span>
-                    <input type="range" min="1" max="10" value="2" class="slider" id="speed-max">
+                    <div id="speed" class="noUiSlider"></div>
+                </div>
+            </div>
+            <div class="aside__wind-effect">
+                <h3>Implement a wind effect!</h3>
+                <label class="aside__wind switch">
+                    <input type="checkbox">
+                    <span class="wind-slider round"></span>
+                </label>
+                <div class="aside-wind__radio">
+                    <form class="radio__form">
+                        <input type="radio" name="direction" value="left"> left
+                        <input type="radio" name="direction" value="right"> right
+                    </form>
                 </div>
             </div>
             <button class="aside__start-button">Start</button>
-            <input type="range" id="slidees">
+            <!-- <input type="range" id="slidees" class=".noUi-target"> -->
         </aside>
         <section class="main-container">
             <div class="main-container__box">

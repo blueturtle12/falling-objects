@@ -1,3 +1,5 @@
+import { windDirection } from './asideControls';
+
 export const random = (min, max) => {
   return Math.round(Math.random() * (max - min) + min);
 };
@@ -30,7 +32,13 @@ export default class FallingObject {
     }, random(500, 2000));
 
     setTimeout(() => {
-      marvelBox.classList.add('move');
+      if (windDirection === 'none') {
+        marvelBox.classList.add('move');
+      } else if (windDirection === 'left') {
+        marvelBox.classList.add('move-wind-left');
+      } else if (windDirection === 'right') {
+        marvelBox.classList.add('move-wind-right');
+      }
     }, random(100, 5000));
 
     marvelBox.addEventListener(

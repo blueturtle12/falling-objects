@@ -11,3 +11,21 @@
 .move {
   transform: translateY(120vh);
 }
+
+.move-wind-left {
+  transform: translate(40vw, 120vh);
+}
+
+.move-wind-right {
+  transform: translate(-40vw, 120vh);
+}
+
+.box__title {
+  font-size: 4em;
+  margin: 0;
+  color: rgba(23, 5, 67, 0.72);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
